@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Activity 1</title>
+</head>
+<body>
+	<p id="studentid"></p>
+	<p id="studenfname"></p>
+	<p id="studenlname"></p>
+	<p id="studentg"></p>
+	<p id="even" style="color:blue"></p>
+	<p id="odd" style="color:red"></p>
+<script type="text/javascript">
+	var idn = prompt("Student ID Number:");
+	var sfn = prompt("Student First Name:");
+	var sln = prompt("Student Last Name:");
+	var sgrade = Number(prompt("Student Grade:"));
+
+	document.getElementById("studentid").innerHTML = 'Student ID Number: ' + idn;
+	document.getElementById("studenfname").innerHTML = "Student First Name: " + sfn;
+	document.getElementById("studenlname").innerHTML = "Student Last Name: " + sln;
+	document.getElementById("studentg").innerHTML = "Student Grade: " + sgrade;
+
+	grade(sgrade);
+	function grade(grd)
+	{if (grd<=3 && grd>=1 && grd%2==0)
+		{return document.getElementById("even").innerHTML = "PASSED";}
+	else if (grd<=3 && grd>=1 && grd%2!=0)
+		{return document.getElementById("odd").innerHTML = "PASSED";}
+	else if (grd>=3 && grd<=5 && grd%2==0)
+		{return document.getElementById("even").innerHTML = "FAILED";}
+	else if (grd>=3 && grd<=5 && grd%2!=0)
+		{return document.getElementById("odd").innerHTML = "FAILED";}
+	else 
+		{return document.getElementById("even").innerHTML = "INVALID GRADE";}
+}
+
+</script>
+</body>
+</html>
